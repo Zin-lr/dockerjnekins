@@ -15,7 +15,7 @@ pipeline {
         }
         stage('push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'DockerHub-LG1', passwordVariable: 'lachgharhub@28', usernameVariable: 'lachgharhub28')]) {
+                withCredentials([usernamePassword(credentialsId: 'DockerHub-LG1', passwordVariable: 'PSWD', usernameVariable: 'LOGIN')]) {
                     script {
                         sh 'echo ${PSWD} | docker login -u ${LOGIN} --password-stdin'
                         sh 'docker push ${DOCKER_REPO}:${IMG_NAME}'
