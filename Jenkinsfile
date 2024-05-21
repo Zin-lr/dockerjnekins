@@ -3,7 +3,7 @@ pipeline {
     environment {
        IMG_NAME = 'my-nx'
        REPO_NAME = 'lachgharhub28'
-       TAG_NAME =  'lts'
+       TAG_NAME =  'latest'
     }
     stages {
         stage('build') {
